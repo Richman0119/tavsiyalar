@@ -15,7 +15,7 @@ Loyihani o'rnatish uchun quyidagi qadamlarni bajaring:
 
 1. Repositoryni klonlash:
     ```sh
-    git clone https://github.com/username/tavsiyalar.git
+    git clone https://github.com/Richman0119/tavsiyalar.git
     cd tavsiyalar
     ```
 
