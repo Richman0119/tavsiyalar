@@ -1,66 +1,72 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Tavsiyalar Loyiha
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Bu loyiha foydalanuvchilarga tavsiyalar yaratish, ko'rish va boshqarish imkonini beruvchi web-saytni o'z ichiga oladi. Sayt Laravel frameworki yordamida ishlab chiqilgan.
 
-## About Laravel
+## Loyihaning Tuzilishi
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Loyiha quyidagi asosiy sahifalarni o'z ichiga oladi:
+1. **Asosiy sahifa** - Bazadagi va ro‘yxatdan o‘tgan foydalanuvchilarning tavsiyalari (kategoriyalar bo‘yicha).
+2. **Tavsiya qo‘shish sahifasi** - Foydalanuvchilar yangi tavsiyalar qo'shishi mumkin.
+3. **Account sahifasi** - Foydalanuvchi o'z tavsiyalarini boshqarishi mumkin.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## O'rnatish
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Loyihani o'rnatish uchun quyidagi qadamlarni bajaring:
 
-## Learning Laravel
+1. Repositoryni klonlash:
+    ```sh
+    git clone https://github.com/username/tavsiyalar.git
+    cd tavsiyalar
+    ```
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+2. Composer paketlarini o'rnatish:
+    ```sh
+    composer install
+    ```
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+3. Environment sozlamalarini nusxalash:
+    ```sh
+    cp .env.example .env
+    ```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+4. Environment sozlamalarini tahrirlash va `APP_NAME`, `DB_DATABASE`, `DB_USERNAME`, `DB_PASSWORD` kabi ma'lumotlarni kiritish.
 
-## Laravel Sponsors
+5. Laravel kalitini yaratish:
+    ```sh
+    php artisan key:generate
+    ```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+6. Ma'lumotlar bazasini yaratish va migratsiyalarni bajarish:
+    ```sh
+    php artisan migrate
+    ```
 
-### Premium Partners
+7. Storage link yaratish:
+    ```sh
+    php artisan storage:link
+    ```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+8. Serverni ishga tushirish:
+    ```sh
+    php artisan serve
+    ```
 
-## Contributing
+## Foydalanish
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+- **Ro'yxatdan o'tish va kirish** - Foydalanuvchilar Laravel Breeze orqali autentifikatsiya qilishlari mumkin.
+- **Tavsiya qo'shish** - Foydalanuvchilar yangi tavsiyalar qo'shishi va ularni boshqarishi mumkin.
+- **Admin Panel** - Admin barcha foydalanuvchilarning tavsiyalarini boshqarishi mumkin.
 
-## Code of Conduct
+## Hissa Qo'shish
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Agar loyihaga hissa qo'shmoqchi bo'lsangiz, quyidagi qadamlarni bajaring:
 
-## Security Vulnerabilities
+1. Fork qiling.
+2. O'zingizning branchingizni yarating (`git checkout -b feature/fooBar`).
+3. O'zgartirishlarni commit qiling (`git commit -am 'Add some fooBar'`).
+4. Branchga push qiling (`git push origin feature/fooBar`).
+5. Pull request yuboring.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## Litsenziya
 
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Bu loyiha [MIT](LICENSE) litsenziyasi ostida litsenziyalangan.
